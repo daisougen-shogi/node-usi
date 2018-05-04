@@ -1,0 +1,6 @@
+# TypeScript
+*.js
+*.map
+*.d.ts
+node_modules
+.vscode

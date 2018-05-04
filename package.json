@@ -1,0 +1,20 @@
+{
+  "name": "node_usi",
+  "version": "0.0.0",
+  "main": "src/index",
+  "author": "deflis <deflis@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "rxjs": "^6.1.0",
+    "rxjs-compat": "^6.1.0",
+    "typescript": "^2.8.3"
+  },
+  "scripts": {
+    "start": "ts-node sample_executor.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^10.0.3",
+    "ts-node": "^6.0.2"
+  }
+}
