@@ -3,7 +3,7 @@ import USI from "./src/index"
 async function main() {
     console.log("connecting")
 
-    const apery = USI.connect2("C:\\Users\\defli\\Downloads\\syogi\\apery_sdt5\\bin\\apery_sdt5_bmi2.exe", [], {windowsHide: false});
+    const apery = USI.execFile("C:\\Users\\defli\\Downloads\\syogi\\apery_sdt5\\bin\\apery_sdt5_bmi2.exe", [], {windowsHide: false});
     
     await apery.init();
 
