@@ -83,6 +83,15 @@ export default class USI {
         console.log('recieve readyok')
     }
 
+    async setOption(name: string, value?: string|number) {
+        let line = `setoption name ${name}`;
+        if (value) {
+            line += ` value ${value}`;
+        }
+
+        await this.write(line);
+    }
+
     write(line: string): Promise<void> {
         console.log(line);
         return new Promise((resolve) => {
