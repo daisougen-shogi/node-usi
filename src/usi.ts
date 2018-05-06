@@ -7,12 +7,12 @@ export default class USI {
     name: string;
     author: string;
 
-    public static connect(path: string, args: string[], options: SpawnOptions): USI {
+    public static spawn(path: string, args: string[], options: SpawnOptions): USI {
         const process: ChildProcess = spawn(path, args, options);
         return new USI(process);
     }
 
-    public static connect2(path: string, args: string[], options: ExecFileOptions): USI {
+    public static execFile(path: string, args: string[], options: ExecFileOptions): USI {
         const process: ChildProcess = execFile(path, args, options);
         return new USI(process);
     }
