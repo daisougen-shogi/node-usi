@@ -1,9 +1,13 @@
 {
   "name": "node_usi",
   "version": "0.0.0",
-  "main": "src/index",
+  "main": "lib/index.js",
   "author": "deflis <deflis@gmail.com>",
   "license": "MIT",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "dependencies": {
     "rxjs": "^6.1.0",
     "rxjs-compat": "^6.1.0"

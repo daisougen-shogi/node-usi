@@ -11,7 +11,9 @@
         "strictNullChecks": true,
         "target": "es2016",
         "lib": ["es2016", "es2017"],
-        "rootDir": "src"
+        "rootDir": "src",
+        "declaration": true,
+        "outDir": "lib"
     },
     "include": [
         "src/*"
