@@ -97,6 +97,38 @@ export default class USI {
         await this.write(line);
     }
 
+    async newGame() {
+        await this.write('usinewgame');
+    }
+
+    async position(position: string, moves: string[]) {
+        await this.write(['position'].concat([position]).concat(moves).join(' '));
+    }
+
+    async positionStartPos(moves: string[]) {
+        await this.position('startpos', moves);
+    }
+
+    async positionSfen(sfen :string, moves: string[]) {
+        await this.position(`sfen ${sfen}`, moves);
+    }
+
+    async go(options: string[]) {
+        await this.write(['go'].concat(options).join(' '));
+    }
+
+    async goInfinite() {
+        await this.go(['infinite']);
+    }
+
+    async stop() {
+        await this.write('stop');
+    }
+
+    get info() {
+        return this.stdout.filter(([command]) => command == 'info');
+    }
+
     write(line: string): Promise<void> {
         console.log(line);
         return new Promise((resolve) => {
