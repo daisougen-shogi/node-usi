@@ -1,5 +1,5 @@
 {
-  "name": "node_usi",
+  "name": "node-usi",
   "version": "0.0.0",
   "main": "lib/index.js",
   "author": "deflis <deflis@gmail.com>",
