@@ -129,6 +129,10 @@ export default class USI {
         return this.stdout.filter(([command]) => command == 'info');
     }
 
+    async gameOver(result: "win" | "lose" | "draw") {
+        return this.write(`gameover ${result}`);
+    }
+
     write(line: string): Promise<void> {
         console.log(line);
         return new Promise((resolve) => {
